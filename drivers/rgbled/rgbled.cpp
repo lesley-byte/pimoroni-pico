@@ -34,9 +34,9 @@ namespace pimoroni {
   }
 
   void RGBLED::update_pwm() {
-    uint16_t r16 = GAMMA[led_r];
-    uint16_t g16 = GAMMA[led_g];
-    uint16_t b16 = GAMMA[led_b];
+    uint16_t r16 = GAMMA[led_r] >> 8;
+    uint16_t g16 = GAMMA[led_g] >> 8;
+    uint16_t b16 = GAMMA[led_b] >> 8;
     r16 *= led_brightness;
     g16 *= led_brightness;
     b16 *= led_brightness;

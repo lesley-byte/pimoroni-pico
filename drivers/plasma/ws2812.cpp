@@ -87,10 +87,10 @@ void WS2812::set_hsv(uint32_t index, float h, float s, float v, uint8_t w) {
 
 void WS2812::set_rgb(uint32_t index, uint8_t r, uint8_t g, uint8_t b, uint8_t w, bool gamma) {
     if(gamma) {
-        r = pimoroni::GAMMA[r];
-        g = pimoroni::GAMMA[g];
-        b = pimoroni::GAMMA[b];
-        w = pimoroni::GAMMA[w];
+        r = pimoroni::GAMMA[r] >> 8;
+        g = pimoroni::GAMMA[g] >> 8;
+        b = pimoroni::GAMMA[b] >> 8;
+        w = pimoroni::GAMMA[w] >> 8;
     }
     switch(color_order) {
         case COLOR_ORDER::RGB:
