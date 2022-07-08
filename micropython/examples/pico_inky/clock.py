@@ -1,6 +1,6 @@
 import time
 import machine
-from picographics import PicoGraphics, DISPLAY_INKY_PACK
+from picographics import PicoGraphics, DISPLAY_INKY_PACK  #This may burn a ghost image into the refresh screen
 
 
 # Buttons
